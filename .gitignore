@@ -2,7 +2,10 @@ main.aux
 main.log
 *.bcf
 *.xml
-
+main.bbl
+main.blg
+main.fdb_latexmk
+main.fls
 
 # History files
 .Rhistory
