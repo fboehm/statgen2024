@@ -32,7 +32,7 @@
 % Main column font
 %\renewcommand{\fontsizemain}{\fontsize{28}{35} \selectfont}
 % Title font
-%\renewcommand{\fontsizetitle}{\fontsize{28}{35} \selectfont}
+\renewcommand{\fontsizetitle}{\fontsize{28}{35} \selectfont}
 % Author font
 %\renewcommand{\fontsizeauthor}{\fontsize{28}{35} \selectfont}
 % Section font
@@ -55,6 +55,14 @@
 % Font of main column
 %\renewcommand{\maincolumnfontcolor}{gray}
 
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{my.bib}
+\addbibresource{references.bib}
+
 \begin{document}	
 \betterposter{
 %%%%%%%% MAIN COLUMN
@@ -62,9 +70,7 @@
 \maincolumn{
 %%%% Main space
 
-\textbf{Main finding} goes here,
-\\translated into \textbf{plain English}.
-\\\textbf{Emphasize} the important words.
+\textbf{We failed to detect a causal effect of FMD on CKD}. However, due to the \textbf{small number of relevant SNPs}, we had \textbf{limited power}. 
 }{
 %%%% Bottom space
 
@@ -88,7 +94,7 @@
 }{
 %%%%%%%% LEFT COLUMN
 
-\title{}
+\title{Assessing Evidence for a Causal Effect of Fibromuscular Dysplasia on Chronic Kidney Disease: A Two-Sample Mendelian Randomization Study}
 \author{Frederick J. Boehm}
 \author{Min-Lee Yang}
 \author{Xiang Zhou}
@@ -96,7 +102,7 @@
 \institution{University of Michigan}
 
 \section{Introduction}
-Here is an itemised list:
+\textbf{Fibromuscular dysplasia (FMD)} is a systemic disease of artery walls that decreases target organ perfusion. Case studies have identified \textbf{chronic kidney disease (CKD)} as a possible consequence.   
 \begin{itemize}
 \item The first item.
 \item The second item.
@@ -120,6 +126,9 @@ If $f$ is continuous on the closed interval $[a,b]$ and $F$ is the indefinite in
 
 \section{Conclusion}
 This is a great poster format!
+
+\section{References}
+\printbibliography
 
 %% This fills the space between the content and the logo
 \vfill

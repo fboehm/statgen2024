@@ -1,5 +1,8 @@
 main.aux
 main.log
+*.bcf
+*.xml
+
 
 # History files
 .Rhistory
