@@ -1,0 +1,14 @@
+---
+format: 
+    pdf :
+        include-in-header:
+            - text: |
+                \usepackage{pexample}
+                \usepackage{easy-todo}
+        keep-tex: true
+---
+
+
+
+{{< include poster-body.tex >}}
+

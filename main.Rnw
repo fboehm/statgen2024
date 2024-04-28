@@ -63,7 +63,6 @@ sorting=ynt
 \addbibresource{my.bib}
 \addbibresource{references.bib}
 
-\usepackage{Sweave}
 \begin{document}	
 \betterposter{
 %%%%%%%% MAIN COLUMN
@@ -161,10 +160,25 @@ Investigators have identified \textbf{chronic kidney disease (CKD)} as a possibl
 
 \section{MR Results}
 
+<<echo=FALSE>>=
+myanalysisdir <- file.path("~/work", "notebook2", "fmdmr", "analysis")
+mydir <- file.path(myanalysisdir, "data", "analysis_intermediates")
+dat_harm <- readRDS(file.path(mydir, "fmd_ckd_dat_harm.rds")) |> tibble::as_tibble()
+result <- TwoSampleMR::mr(dat_harm) 
+result_het <- TwoSampleMR::mr_heterogeneity(dat = dat_harm)
+result_pleiotropy <- TwoSampleMR::mr_pleiotropy_test(dat = dat_harm)
+pp <- TwoSampleMR::mr_scatter_plot(mr_results = result, dat = dat_harm)
+pp[[1]] + 
+    ggplot2::xlim(- 0.5, 0.5) + 
+    ggplot2::ylim(-0.001, 0.001) + 
+    ggokabeito::scale_color_okabe_ito(name = "MR Test", alpha = .9)
+fig_fn <- file.path(myanalysisdir, "results", "fmd_ckd_mr_scatter_plot.png")
+ggplot2::ggsave(fig_fn)
+@
 
 
 
-\includegraphics[width=\textwidth]{~/work/notebook2/fmdmr/analysis/results/fmd_ckd_mr_scatter_plot.png}
+\includegraphics[width=\textwidth]{\Sexpr{fig_fn}}
 
 
 \section{Conclusion}
