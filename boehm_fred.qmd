@@ -1,0 +1,32 @@
+---
+title: "Does Fibromuscular Dysplasia Cause Chronic Kidney Disease? A Two-Sample Mendelian Randomization Study"
+author: 'Frederick Boehm'
+format: beamer
+date: "2024-05-01"
+date-format: full
+---
+
+
+
+## Fibromuscular dysplasia (FMD)
+
+- ~ 6% prevalence in U.S.  
+- 90% of cases are women  
+
+![FMD pathology in arteries](Fibromuscular.png)
+
+
+
+
+## Does FMD cause CKD?  
+
+![](fmd_ckd_mr_scatter_plot.png){width=80%}
+
+## More Information
+
+Fred Boehm: frederick.boehm@gmail.com
+
+
+![](qr.png){width=40%}
+
+
