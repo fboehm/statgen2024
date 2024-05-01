@@ -7,7 +7,7 @@ bibliography: mrref.bib
 
 ## Overview
 
-We used five MR methods when analyzing FMD as a putative cause of CKD.
+We used five MR methods when analyzing FMD as a putative cause of CKD [@twosamplemr]:
 
 1. Inverse Variance Weighted
 1. Weighted Median
@@ -17,6 +17,8 @@ We used five MR methods when analyzing FMD as a putative cause of CKD.
 
 
 
+## MR & Meta-analysis [@bowden2019meta]
+
 For a valid instrumental variable (SNP), the SNP-outcome association is the product of the SNP-exposure association and the causal effect of exposure on outcome.
 
 $$\Gamma = \beta\gamma$$
@@ -25,4 +27,6 @@ Where $\Gamma$ is the SNP-outcome association, $\beta$ is the SNP-exposure assoc
 
 $$\hat\beta = \frac{\Gamma}{\gamma}$$
 
+
+## References
 
