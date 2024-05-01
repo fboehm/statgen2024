@@ -1,0 +1,28 @@
+---
+title: "MR Methods"
+format: gfm
+bibliography: mrref.bib
+---
+
+
+## Overview
+
+We used five MR methods when analyzing FMD as a putative cause of CKD.
+
+1. Inverse Variance Weighted
+1. Weighted Median
+1. MR Egger
+1. Simple Mode
+1. Weighted Mode
+
+
+
+For a valid instrumental variable (SNP), the SNP-outcome association is the product of the SNP-exposure association and the causal effect of exposure on outcome.
+
+$$\Gamma = \beta\gamma$$
+
+Where $\Gamma$ is the SNP-outcome association, $\beta$ is the SNP-exposure association, and $\gamma$ is the causal effect of exposure on outcome.
+
+$$\hat\beta = \frac{\Gamma}{\gamma}$$
+
+
